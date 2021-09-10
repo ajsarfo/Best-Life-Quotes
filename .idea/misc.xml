@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-mdpi/ic_textalign_center.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_textalign_left.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_textalign_right.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/font_card_shape.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_baseline_brightness_high_24.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_baseline_brightness_low_24.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_check.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_textalign_center.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_textalign_right.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ic_textalign_underline.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable-xxhdpi/ripple.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable-xxhdpi/shape_read_font_a1.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable-xxhdpi/shape_read_font_a2.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/font_card_shape.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_align_left.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_align_right.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_baseline_brightness_high_24.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_brightness_high_24_1.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_brightness_low_24.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_brightness_low_24_2.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_align_left_24.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_align_right_24.xml" value="0.2057915057915058" />
+        <entry key="app/src/main/res/drawable/ic_bg_image.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable/ic_check_1.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable/ic_textalign_center.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_textalign_center_1.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/ic_textalign_left.xml" value="1.665625" />
+        <entry key="app/src/main/res/drawable/ic_textalign_underline.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/panel_background_chooser_ripple.xml" value="0.209765625" />
+        <entry key="app/src/main/res/drawable/rate.xml" value="0.1984375" />
+        <entry key="app/src/main/res/drawable/ripple.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/shape_read_font_1.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/shape_read_font_2.xml" value="0.208203125" />
+        <entry key="app/src/main/res/drawable/transparent_dark_layer.xml" value="0.209765625" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.184765625" />
+        <entry key="app/src/main/res/layout/activity_quote.xml" value="0.184765625" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19765625" />
+        <entry key="app/src/main/res/layout/layout_app_preparation_dialog.xml" value="0.19765625" />
+        <entry key="app/src/main/res/layout/layout_category.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/layout_color_card.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_detail.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/layout_detail_image.xml" value="0.1859375" />
+        <entry key="app/src/main/res/layout/layout_detail_image_dialog.xml" value="0.1859375" />
+        <entry key="app/src/main/res/layout/layout_detail_lower.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/layout_detail_pager.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/layout_detail_upper.xml" value="0.19765625" />
+        <entry key="app/src/main/res/layout/layout_detial_dialog.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/layout_font_card.xml" value="0.101953125" />
+        <entry key="app/src/main/res/layout/layout_image.xml" value="0.1859375" />
+        <entry key="app/src/main/res/layout/layout_preparation_progress.xml" value="0.19765625" />
+        <entry key="app/src/main/res/layout/layout_quote.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/layout_text_panel.xml" value="0.18" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.131640625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2057915057915058" />
+        <entry key="app/src/main/res/xml/xml.xml" value="0.184765625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

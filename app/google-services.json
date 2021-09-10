@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "46897568075",
+    "project_id": "life-quotes-and-caption",
+    "storage_bucket": "life-quotes-and-caption.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46897568075:android:7484d078357d144589f0ce",
+        "android_client_info": {
+          "package_name": "com.sarftec.lifequotesandcaptions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46897568075-8of3po5tc9salkk7mv4ecu5su6od507f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCljZoiS_b8_3SnLMEIOppDzyySi2-BCR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46897568075-8of3po5tc9salkk7mv4ecu5su6od507f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46897568075:android:42f00b7468670d1489f0ce",
+        "android_client_info": {
+          "package_name": "com.sarftec.secondlifequotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46897568075-8of3po5tc9salkk7mv4ecu5su6od507f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCljZoiS_b8_3SnLMEIOppDzyySi2-BCR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46897568075-8of3po5tc9salkk7mv4ecu5su6od507f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

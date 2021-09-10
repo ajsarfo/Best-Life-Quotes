@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/primary_font</item>
+    </style>
+
+    <style name="AppThemeHome">
+        <item name="android:textColorPrimary">@color/on_toolbar_color</item>
+        <item name="android:textColorSecondary">@color/on_toolbar_color</item>
+        <item name="android:actionBarStyle">@style/Theme.SecondLifeQuotes</item>
+        <item name="android:fontFamily">@font/primary_font</item>
+        <item name="actionBarStyle">@style/Theme.SecondLifeQuotes</item>
+        <item name="actionMenuTextColor">@color/on_toolbar_color</item>
+    </style>
+
+    <style name="DialogTitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="fontFamily">@font/primary_font</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="DialogBodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="fontFamily">@font/primary_font</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+    </style>
+
+    <style name="DialogButtonTextStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="fontFamily">@font/primary_font</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/colorWhite</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/DialogTitleTextStyle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/DialogBodyTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonTextStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonTextStyle</item>
+    </style>
+</resources>

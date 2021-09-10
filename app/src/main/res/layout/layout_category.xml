@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="binding"
+            type="com.sarftec.lifequotesandcaptions.presentation.binding.CategoryBinding" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            android:onClick="@{() -> binding.clicked()}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_30dp"
+                    android:scaleType="centerCrop"
+                    app:holder="@{binding.holder}"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/primary_font"
+                        android:gravity="center"
+                        android:text="@{binding.category.name}"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        tools:text="Happiness" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>
