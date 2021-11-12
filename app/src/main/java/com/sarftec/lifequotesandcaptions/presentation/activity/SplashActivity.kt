@@ -14,6 +14,10 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SplashActivity : BaseActivity() {
 
+    override fun canShowInterstitial(): Boolean {
+        return false
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySplashBinding.inflate(layoutInflater)

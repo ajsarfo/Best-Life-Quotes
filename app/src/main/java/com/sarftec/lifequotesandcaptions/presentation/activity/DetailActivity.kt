@@ -7,10 +7,11 @@ import androidx.activity.viewModels
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
-import com.appodeal.ads.Appodeal
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import com.sarftec.lifequotesandcaptions.R
+import com.sarftec.lifequotesandcaptions.advertisement.AdCountManager
+import com.sarftec.lifequotesandcaptions.advertisement.BannerManager
 import com.sarftec.lifequotesandcaptions.advertisement.InterstitialManager
 import com.sarftec.lifequotesandcaptions.databinding.ActivityDetailBinding
 import com.sarftec.lifequotesandcaptions.databinding.LayoutTextPanelBinding
@@ -37,14 +38,6 @@ class DetailActivity : BaseActivity(), ColorPickerDialogListener {
     private val layoutBinding by lazy {
         ActivityDetailBinding.inflate(
             layoutInflater
-        )
-    }
-
-    private val interstitialManager by lazy {
-        InterstitialManager(
-            this,
-            networkManager,
-            listOf(1, 3)
         )
     }
 
@@ -84,7 +77,7 @@ class DetailActivity : BaseActivity(), ColorPickerDialogListener {
                     }
                 },
                 onOption2 = {
-                    interstitialManager.showAd {
+                    interstitialManager?.showAd {
                         shareBackgroundImage()
                     }
                 }
@@ -105,15 +98,19 @@ class DetailActivity : BaseActivity(), ColorPickerDialogListener {
 
     private val viewModel by viewModels<DetailViewModel>()
 
-    override fun onResume() {
-        super.onResume()
-        Appodeal.show(this, Appodeal.BANNER_VIEW)
+    override fun createAdCounterManager(): AdCountManager {
+        return AdCountManager(listOf(1, 3))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutBinding.root)
-        Appodeal.setBannerViewId(R.id.main_banner)
+        /*************** Admob Configuration ********************/
+        BannerManager(this, adRequestBuilder).attachBannerAd(
+            getString(R.string.admob_banner_detail),
+            layoutBinding.mainBanner
+        )
+        /**********************************************************/
         imageStore.reload()
         savedInstanceState ?: kotlin.run {
             intent?.getParcelableExtra<QuoteToDetail>(ACTIVITY_PARCEL)?.let {

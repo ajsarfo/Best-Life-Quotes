@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import com.appodeal.ads.Appodeal
 import com.sarftec.lifequotesandcaptions.R
-import com.sarftec.lifequotesandcaptions.advertisement.InterstitialManager
+import com.sarftec.lifequotesandcaptions.advertisement.AdCountManager
+import com.sarftec.lifequotesandcaptions.advertisement.BannerManager
 import com.sarftec.lifequotesandcaptions.databinding.ActivityMainBinding
 import com.sarftec.lifequotesandcaptions.manager.AppReviewManager
 import com.sarftec.lifequotesandcaptions.parcel.CategoryToQuote
@@ -20,14 +20,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : BaseActivity() {
 
-    private val interstitialManager by lazy {
-        InterstitialManager(
-            this,
-            networkManager,
-            listOf(1, 3, 4, 3)
-        )
-    }
-
     private val binding by lazy {
         ActivityMainBinding.inflate(
             layoutInflater
@@ -36,7 +28,7 @@ class MainActivity : BaseActivity() {
 
     private val categoryAdapter by lazy {
         CategoryAdapter(dependency) {
-            interstitialManager.showAd {
+            interstitialManager?.showAd {
                 navigateTo(
                     QuoteActivity::class.java,
                     parcel = CategoryToQuote(it.id, it.name)
@@ -51,27 +43,28 @@ class MainActivity : BaseActivity() {
 
     private val viewModel by viewModels<CategoryViewModel>()
 
+    override fun createAdCounterManager(): AdCountManager {
+        return AdCountManager(listOf(1, 3, 4, 3))
+    }
+
     override fun onBackPressed() {
         finish()
     }
 
     override fun onResume() {
         super.onResume()
-        Appodeal.show(this, Appodeal.BANNER_VIEW)
         modifiedQuoteList.clear()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        /**************Set up appodeal configuration*****************/
-        Appodeal.setBannerViewId(R.id.main_banner)
-        Appodeal.initialize(
-            this,
-            getString(R.string.appodeal_id),
-            Appodeal.BANNER_VIEW or Appodeal.INTERSTITIAL
+        /*************** Admob Configuration ********************/
+        BannerManager(this, adRequestBuilder).attachBannerAd(
+            getString(R.string.admob_banner_main),
+            binding.mainBanner
         )
-        /*************************************************************/
+        /**********************************************************/
         setupRecyclerView()
         configureToolbar()
         viewModel.fetch()
@@ -100,7 +93,7 @@ class MainActivity : BaseActivity() {
                     true
                 }
                 R.id.quote_of_the_day -> {
-                    interstitialManager.showAd {
+                    interstitialManager?.showAd {
                         navigateTo(
                             DetailActivity::class.java,
                             parcel = QuoteToDetail(

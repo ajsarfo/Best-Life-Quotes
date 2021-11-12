@@ -2,12 +2,9 @@ package com.sarftec.lifequotesandcaptions.presentation.activity
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.appodeal.ads.Appodeal
-import com.sarftec.lifequotesandcaptions.R
 import com.sarftec.lifequotesandcaptions.databinding.ActivityQuoteBinding
 import com.sarftec.lifequotesandcaptions.presentation.adapter.ItemDecorator
 import com.sarftec.lifequotesandcaptions.presentation.adapter.QuoteAdapter
-import com.sarftec.lifequotesandcaptions.presentation.image.ImageHolder
 import com.sarftec.lifequotesandcaptions.presentation.utils.glideLoad
 import com.sarftec.lifequotesandcaptions.presentation.viewmodel.BaseQuoteViewModel
 
@@ -27,14 +24,12 @@ abstract class BaseQuoteActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        Appodeal.show(this, Appodeal.BANNER_VIEW)
         runOnResume()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutBinding.root)
-        Appodeal.setBannerViewId(R.id.main_banner)
         imageStore.reload()
         runInit(savedInstanceState)
         configureActivity()

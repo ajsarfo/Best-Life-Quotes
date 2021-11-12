@@ -2,10 +2,14 @@ package com.sarftec.lifequotesandcaptions.presentation.activity
 
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
 import android.os.Parcelable
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
 import com.sarftec.lifequotesandcaptions.R
+import com.sarftec.lifequotesandcaptions.advertisement.AdCountManager
+import com.sarftec.lifequotesandcaptions.advertisement.InterstitialManager
 import com.sarftec.lifequotesandcaptions.manager.NetworkManager
 import com.sarftec.lifequotesandcaptions.presentation.Dependency
 import com.sarftec.lifequotesandcaptions.presentation.image.ImageStore
@@ -21,6 +25,32 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected val dependency by lazy {
         Dependency(this, imageStore)
+    }
+
+    protected val adRequestBuilder: AdRequest by lazy {
+        AdRequest.Builder().build()
+    }
+
+    protected var interstitialManager: InterstitialManager? = null
+
+    protected open fun canShowInterstitial() : Boolean = true
+
+    protected open fun createAdCounterManager() : AdCountManager {
+        return AdCountManager(listOf(1, 4, 3))
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //Load interstitial if required by extending activity
+        if(!canShowInterstitial()) return
+        interstitialManager = InterstitialManager(
+            this,
+            getString(R.string.admob_interstitial_id),
+            networkManager,
+            createAdCounterManager(),
+            adRequestBuilder
+        )
+        interstitialManager?.load()
     }
 
     protected fun <T> navigateTo(
